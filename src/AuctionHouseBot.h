@@ -251,6 +251,14 @@ private:
     float PriceMultiplierCategoryMountQualityLegendary;
     float PriceMultiplierCategoryMountQualityArtifact;
     float PriceMultiplierCategoryMountQualityHeirloom;
+    float PriceMultiplierCategoryPetQualityPoor;
+    float PriceMultiplierCategoryPetQualityNormal;
+    float PriceMultiplierCategoryPetQualityUncommon;
+    float PriceMultiplierCategoryPetQualityRare;
+    float PriceMultiplierCategoryPetQualityEpic;
+    float PriceMultiplierCategoryPetQualityLegendary;
+    float PriceMultiplierCategoryPetQualityArtifact;
+    float PriceMultiplierCategoryPetQualityHeirloom;
     bool AdvancedPricingConsumablePotionEnabled;
     bool AdvancedPricingConsumableElixirEnabled;
     bool AdvancedPricingConsumableFlaskEnabled;
@@ -264,6 +272,7 @@ private:
     bool AdvancedPricingTradeGoodMeatEnabled;
     bool AdvancedPricingMiscJunkEnabled;
     bool AdvancedPricingMiscMountEnabled;
+    bool AdvancedPricingMiscPetEnabled;
     bool UseItemSellPriceIfHigherThanPriceMinimumCenterBase;
     uint32 PriceMinimumCenterBaseConsumable;
     uint32 PriceMinimumCenterBaseContainer;
