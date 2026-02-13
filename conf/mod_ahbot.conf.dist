@@ -562,6 +562,7 @@ AuctionHouseBot.AdvancedPricing.TradeGood.Elemental.Enabled     = true
 AuctionHouseBot.AdvancedPricing.TradeGood.Meat.Enabled          = true
 AuctionHouseBot.AdvancedPricing.Misc.Junk.Enabled               = true
 AuctionHouseBot.AdvancedPricing.Misc.Mount.Enabled              = true
+AuctionHouseBot.AdvancedPricing.Misc.Pet.Enabled                = true
 
 ###############################################################################
 #    AuctionHouseBot.PriceMultiplier.Category.*
@@ -796,6 +797,16 @@ AuctionHouseBot.PriceMultiplier.CategoryMount.QualityEpic       = 5750.0
 AuctionHouseBot.PriceMultiplier.CategoryMount.QualityLegendary  = 1.0
 AuctionHouseBot.PriceMultiplier.CategoryMount.QualityArtifact   = 1.0
 AuctionHouseBot.PriceMultiplier.CategoryMount.QualityHeirloom   = 1.0
+
+# Pet
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityPoor         = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityNormal       = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityUncommon     = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityRare         = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityEpic         = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityLegendary    = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityArtifact     = 1.0
+AuctionHouseBot.PriceMultiplier.CategoryPet.QualityHeirloom     = 1.0
 
 # Money
 AuctionHouseBot.PriceMultiplier.CategoryMoney.QualityPoor       = 1.0

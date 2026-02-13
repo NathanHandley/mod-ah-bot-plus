@@ -570,6 +570,24 @@ float AuctionHouseBot::GetAdvancedPricingMultiplier(ItemTemplate const* itemProt
                 }
                 break;
             }
+            case ITEM_SUBCLASS_JUNK_PET:
+            {
+                if (!AdvancedPricingMiscPetEnabled)
+                    break;
+                switch (itemProto->Quality)
+                {
+                    case ITEM_QUALITY_POOR:         advancedPricingMultiplier = PriceMultiplierCategoryPetQualityPoor;      break;
+                    case ITEM_QUALITY_NORMAL:       advancedPricingMultiplier = PriceMultiplierCategoryPetQualityNormal;    break;
+                    case ITEM_QUALITY_UNCOMMON:     advancedPricingMultiplier = PriceMultiplierCategoryPetQualityUncommon;  break;
+                    case ITEM_QUALITY_RARE:         advancedPricingMultiplier = PriceMultiplierCategoryPetQualityRare;      break;
+                    case ITEM_QUALITY_EPIC:         advancedPricingMultiplier = PriceMultiplierCategoryPetQualityEpic;      break;
+                    case ITEM_QUALITY_LEGENDARY:    advancedPricingMultiplier = PriceMultiplierCategoryPetQualityLegendary; break;
+                    case ITEM_QUALITY_ARTIFACT:     advancedPricingMultiplier = PriceMultiplierCategoryPetQualityArtifact;  break;
+                    case ITEM_QUALITY_HEIRLOOM:     advancedPricingMultiplier = PriceMultiplierCategoryPetQualityHeirloom;  break;
+                    default: break;
+                }
+                break;
+            }
             default: break;
         }
     }
@@ -2042,6 +2060,15 @@ void AuctionHouseBot::InitializeConfiguration()
     PriceMultiplierCategoryMountQualityArtifact = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryMount.QualityArtifact", 1.0);
     PriceMultiplierCategoryMountQualityHeirloom = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryMount.QualityHeirloom", 1.0);
 
+    PriceMultiplierCategoryPetQualityPoor = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityPoor", 1.0);
+    PriceMultiplierCategoryPetQualityNormal = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityNormal", 1.0);
+    PriceMultiplierCategoryPetQualityUncommon = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityUncommon", 1.0);
+    PriceMultiplierCategoryPetQualityRare = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityRare", 1.0);
+    PriceMultiplierCategoryPetQualityEpic = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityEpic", 1.0);
+    PriceMultiplierCategoryPetQualityLegendary = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityLegendary", 1.0);
+    PriceMultiplierCategoryPetQualityArtifact = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityArtifact", 1.0);
+    PriceMultiplierCategoryPetQualityHeirloom = sConfigMgr->GetOption<float>("AuctionHouseBot.PriceMultiplier.CategoryPet.QualityHeirloom", 1.0);
+
     // Advanced Pricing
     AdvancedPricingConsumablePotionEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.Consumable.Potion.Enabled", true);
     AdvancedPricingConsumableElixirEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.Consumable.Elixir.Enabled", true);
@@ -2056,6 +2083,7 @@ void AuctionHouseBot::InitializeConfiguration()
     AdvancedPricingTradeGoodMeatEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.TradeGood.Meat.Enabled", true);
     AdvancedPricingMiscJunkEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.Misc.Junk.Enabled", true);
     AdvancedPricingMiscMountEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.Misc.Mount.Enabled", true);
+    AdvancedPricingMiscPetEnabled = sConfigMgr->GetOption<bool>("AuctionHouseBot.AdvancedPricing.Misc.Pet.Enabled", true);
 
     // Price minimums
     UseItemSellPriceIfHigherThanPriceMinimumCenterBase = sConfigMgr->GetOption<bool>("AuctionHouseBot.PriceMinimumCenterBase.UseItemSellPriceIfHigher", true);
