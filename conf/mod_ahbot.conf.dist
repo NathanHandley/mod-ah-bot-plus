@@ -84,7 +84,7 @@ AuctionHouseBot.ListingExpireTimeInSecondsMax = 86400
 ###############################################################################
 #    AuctionHouseBot.CompleteItemValueOverride.Enabled
 #        Enable/Disable the ability to have a list of items that have exact
-#        price values which ignore any other calucation, including advanced
+#        price values which ignore any other calculation, including advanced
 #        pricing.  Note that "AuctionHouseBot.Buyer." is still honered.
 #    Default: false (disabled)
 #
